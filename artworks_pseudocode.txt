@@ -1,0 +1,136 @@
+const works = {
+	"Baptism of Christ":{
+			alternate:"Battesimo di Cristo",
+			artist: ["Andrea del Verrochio", "Leonardo da Vinci"],
+			date: "1472-1475"
+			medium: "oil on wood"
+			location: "Uffizi, Florence"
+			url:"https://upload.wikimedia.org/wikipedia/commons/2/29/Verrocchio%2C_Leonardo_da_Vinci_-_Battesimo_di_Cristo.jpg"
+	"Arno Valley Landscape"	:{
+			alternate:"Paesaggio con fiume",
+			artist: "Leonardo da Vinci",
+			date: "1473",
+			medium: "ink on paper"
+			location: "Uffizi, Florence"
+			url:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Study_of_a_Tuscan_Landscape.jpg/800px-Study_of_a_Tuscan_Landscape.jpg"
+			}
+	"Adoration of the Magi":{
+			alternate: "Adorazione dei Magi",
+			artist: "Leonardo da Vinci",
+			date: "1481",
+			medium: "oil on wood"
+			status: "unfinished"
+			location: "Uffizi, Florence"
+			url:"https://upload.wikimedia.org/wikipedia/commons/2/27/Leonardo_da_Vinci_-_Adorazione_dei_Magi_-_Google_Art_Project.jpg"
+			}
+	"Adoration of the Magi":{
+			alternate: "Adorazione dei Magi",
+			artist: "Filippino Lippi",
+			date: "1496",
+			medium: "oil on wood",
+			location: "Uffizi, Florence",
+			url:"https://upload.wikimedia.org/wikipedia/commons/7/76/Adorazione_dei_magi%2C_filippino_lippi.JPG"
+			}
+	"Madonna of the Carnation":{
+			alternate: "Madonna del Garofano",
+			artist: "Leonardo da Vinci",
+			date: "1478-1480",
+			medium: "oil on wood",
+			location: "Alte Pinakothek, Munich",
+			url:"https://upload.wikimedia.org/wikipedia/commons/7/70/Leonardo_da_Vinci_Madonna_of_the_Carnation.jpg"
+			}
+	"Ginerva de' Beci":{
+			artist: "Leonardo da Vinci",
+			date: "1474-1478",
+			medium: "oil on wood",
+			location: "National Gallery of Art, Washington, D.C.",
+			url:"https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Leonardo_da_Vinci_-_Ginevra_de%27_Benci_-_Google_Art_Project.jpg/1932px-Leonardo_da_Vinci_-_Ginevra_de%27_Benci_-_Google_Art_Project.jpg"
+			}
+	"Madonna with a Flower":{
+			alternate: "Benois Madonna",
+			artist: "Leonardo da Vinci",
+			date: "1478",
+			medium: "oil on wood",
+			location: "Hermitage Museum, Saint Petersburg",
+			url:"https://upload.wikimedia.org/wikipedia/commons/c/c7/Madonna_benois_01.jpg"
+			}
+	"Virgin of the Rocks":{
+			alternate: "Vergine delle rocce",
+			artist: "Leonardo da Vinci",
+			date: "1483-1486",
+			medium: "oil on wood",
+			location: "Louvre, Paris",
+			url:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg/800px-Leonardo_Da_Vinci_-_Vergine_delle_Rocce_%28Louvre%29.jpg"
+			}
+	"The Last Supper":{
+			alternate: "L'Ultima Cena",
+			artist: "Leonardo da Vinci",
+			date: "1495-1498",
+			medium: "tempera on gesso, pitch and mastic",
+			location: "Convent of Santa Maria delle Grazie, Milan",
+			url:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg/2560px-The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg"
+			}
+	"Portrait of a Musician":{
+			alternate: "Ritratto di musico",
+			artist: "Leonardo da Vinci",
+			date: "1483-1487",
+			status:"unfinished",
+			medium: "oil (and possibly tempera) on wood",
+			location: "Pinacoteca Ambrosiana, Milan",
+			url:"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Leonardo_da_Vinci_-_Portrait_of_a_Musician_-_Pinacoteca_Ambrosiana.jpg/1560px-Leonardo_da_Vinci_-_Portrait_of_a_Musician_-_Pinacoteca_Ambrosiana.jpg"
+			}
+	"Head of a Young Woman":{
+			artist: "Leonardo da Vinci",
+			date: "1483-1485",
+			medium: "silverpoint on paper",
+			location: "Royal Library of Turin, Italy",
+			url:"https://upload.wikimedia.org/wikipedia/commons/b/b5/Leonardo_da_vinci%2C_Head_of_a_girl_01.jpg"
+			}
+	"Vitruvian Man":{
+			alternate: "L'uomo vitruviano",
+			artist: "Leonardo da Vinci",
+			date: "1490",
+			medium: "Pen and ink with wash over metalpoint on paper"
+			location: "Gallerie dell'Accademia, Venice, Italy"
+			url:"https://upload.wikimedia.org/wikipedia/commons/2/22/Da_Vinci_Vitruve_Luc_Viatour.jpg"
+			}
+	"La belle ferronnière":{
+			artist: "Leonardo da Vinci",
+			date: "1490-1496",
+			medium: "oil on wood",
+			location: "Louvre, Paris",
+			url:"https://upload.wikimedia.org/wikipedia/commons/2/2b/La_belle_ferronni%C3%A8re%2CLeonardo_da_Vinci_-_Louvre.jpg"
+			}
+	"Plan of Imola":{
+			artist: "Leonardo da Vinci",
+			date: "1502",
+			medium: "Pen and ink, with coloured washes, and stylus lines, over black chalk paper",
+			location: "Royal Collection, UK",
+			url:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Leonardo_da_Vinci_-_Plan_of_Imola_-_Google_Art_Project.jpg/2560px-Leonardo_da_Vinci_-_Plan_of_Imola_-_Google_Art_Project.jpg"
+			}
+	"Portrait of Mona Lisa del Giocondo":{
+			alternate: "Ritratto di Monna Lisa del Giocondo",
+			artist: "Leonardo da Vinci",
+			date: "1503-1506",
+			medium: "oil on wood",
+			location: "Louvre, Paris",
+			url:"https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1374px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
+			}
+	"Lady with an Ermine":{
+			alternate: "Dama con l'ermellino",
+			artist: "Leonardo da Vinci",
+			date: "1489-1491",
+			medium: "Oil on Wood",
+			location: "Czartoryski Museum, Kraków, Poland",
+			url:"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg/1523px-Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg"
+			}
+	"The Virgin and Child with Saint Anne":{
+			alternate: "La Vierge, l'Enfant Jésus et sainte Anne",
+			artist: "Leonardo da Vinci",
+			date: "1503",
+			status:"unfinished",
+			medium: "Oil on wood",
+			location: "Louvre, Paris",
+			url:"https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Leonardo_da_Vinci_-_Virgin_and_Child_with_St_Anne_C2RMF_retouched.jpg/1527px-Leonardo_da_Vinci_-_Virgin_and_Child_with_St_Anne_C2RMF_retouched.jpg"
+			}
+}

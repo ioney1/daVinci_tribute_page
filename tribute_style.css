@@ -1,0 +1,917 @@
+/*tributestyle.css*/
+
+/*#region Customise scrollbar*/
+::-webkit-scrollbar-thumb {
+  width: 15px;
+  background-color: rgba(231, 190, 144, 0.5);
+  mix-blend-mode: hard-light;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track-piece {
+  display: none;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(231, 190, 143, 0.609);
+}
+
+::-webkit-scrollbar-corner{
+  display:none;
+}
+/*#endregion*/
+
+/*#region Webpage background*/
+html,
+body,
+.timeline-screen {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: overlay;
+  background: linear-gradient(167.95deg, #62412f 30%, #33291a 70.58%) no-repeat
+      fixed,
+    linear-gradient(to right, var(--darken), var(--darken)) no-repeat fixed,
+    linear-gradient(to right, var(--desaturate), var(--desaturate)) no-repeat
+      fixed,
+    linear-gradient(to right, var(--warmer), var(--warmer)) no-repeat fixed,
+    var(--codexbg) no-repeat fixed;
+  background-blend-mode: hard-light, darken, saturation, hue, normal;
+  background-size: cover; /*add a media query for portrait ar*/
+  --codexbg: url(media/Leonardo_da_vinci\,_Double_manuscript_page_on_the_Sforza_monument.jpg);
+  --darken: rgba(41, 35, 35, 0.308);
+  --desaturate: rgba(255, 255, 255, 0.418);
+  --warmer: rgba(206, 89, 35, 0.294);
+  height: 4800px;
+}
+
+:root {
+  background: linear-gradient(167.95deg, #62412f 30%, #33291a 70.58%) no-repeat
+      fixed,
+    linear-gradient(to right, var(--darken), var(--darken)) no-repeat fixed,
+    linear-gradient(to right, var(--desaturate), var(--desaturate)) no-repeat
+      fixed,
+    linear-gradient(to right, var(--warmer), var(--warmer)) no-repeat fixed,
+    var(--codexbg) no-repeat fixed;
+  background-blend-mode: hard-light, darken, saturation, hue, normal;
+  background-size: cover; /*add a media query for portrait ar*/
+  background-color: none;
+  opacity: 0.97;
+  --codexbg: url(media/Leonardo_da_vinci\,_Double_manuscript_page_on_the_Sforza_monument.jpg);
+  --darken: rgba(41, 35, 35, 0.308);
+  --desaturate: rgba(255, 255, 255, 0.418);
+  --warmer: rgba(206, 89, 35, 0.294);
+  font-family: Arimo, serif;
+}
+/*#endregion*/
+
+/*#region Default styling*/
+@media screen and (min-width: 0px) {
+  /*#region Information page*/
+  .info {
+    position: fixed;
+    z-index: 101;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 30vh;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    align-items: center;
+    justify-items: center;
+    grid-column-gap: 5px;
+  }
+
+  #title {
+    justify-self: center;
+    font-family: Tangerine, sans-serif;
+    font-size: 500%;
+    font-weight: normal;
+    align-self: center;
+    padding-top: 25px;
+  }
+
+  #img-div {
+    display: none;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-self: center;
+    align-self: end;
+    padding-bottom: 1em;
+    align-self: start;
+  }
+
+  #img-caption {
+    text-align: center;
+    position: relative;
+    top: 50.5px;
+    font-family: Arimo, serif;
+    font-size: 80%;
+  }
+
+  #image {
+    width: 10vh;
+    border-radius: 10%;
+    align-self: center;
+    position: relative;
+    top: 50px;
+    max-width: 200px;
+  }
+
+  #tribute-info {
+    align-self: baseline;
+    padding-right: 0.8rem;
+    padding-left: 1.5rem;
+    max-height: 90%;
+    overflow: hidden;
+    font-family: Arimo, serif;
+    font-size: 1.9vw;
+  }
+
+  .info::after {
+    content: "";
+    background: url(media/Old-Paper-PNG-Image.png)
+      no-repeat fixed;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: rotate(180deg);
+    filter: drop-shadow(-0.01px -0.01px 5px black);
+    /*content:"";
+  background-color: rgb(248, 225, 196);
+  width:100%;
+  height:inherit;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: -1;*/
+  }
+
+  /*#endregion*/
+
+  /*#region Timeline and Markers*/
+
+  .timeline {
+    border-left: 25px solid white;
+    height: 4200px;
+    margin-left: -3px;
+    position: absolute;
+    border-radius: 100px;
+    left: 50%;
+    top: 200px;
+    mix-blend-mode: soft-light;
+    z-index: inherit;
+  }
+
+  /*#region Periods DISABLED*/
+  /*
+.period {
+  border-left: 15px solid;
+  margin-left: 130px;
+  position: absolute;
+  border-radius: 100px;
+  left: 50%;
+  z-index: inherit;
+}
+
+#florence1 {
+  border-color: #2c638f;
+  height: 600px;
+  top: 1520px;
+}
+
+#milan1 {
+  border-color: #d2a766;
+  height: 1080px;
+  top: 2120px;
+}
+
+#florence2 {
+  border-color: #2c638f;
+  height: 480px;
+  top: 3200px;
+}
+
+#milan2 {
+  border-color: #d2a766;
+  height: 300px;
+  top: 3680px;
+}
+
+#rome {
+  border-color: #a3b461;
+  height: 360px;
+  top: 3980px;
+}
+
+#high-ren {
+  border-color: #ad5539;
+  height: 1500px;
+  top: 2900px;
+  margin-left: 260px;
+}*/
+
+  /*#endregion*/
+
+  /*#region Decade Markers*/
+  .decade-circle {
+    height: 95px;
+    width: 95px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    left: 50%;
+    margin-left: -37.5px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  #d1450 {
+    top: 155px;
+  }
+
+  #d1460 {
+    top: 755px;
+  }
+
+  #d1470 {
+    top: 1355px;
+  }
+
+  #d1480 {
+    top: 1955px;
+  }
+
+  #d1490 {
+    top: 2555px;
+  }
+
+  #d1500 {
+    top: 3155px;
+  }
+
+  #d1510 {
+    top: 3755px;
+  }
+
+  #d1520 {
+    top: 4345px;
+  }
+  /*#endregion*/
+
+  /*#region Decade Labels*/
+  .decade-label {
+    font-size: 73px;
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: white;
+    left: 50%;
+    z-index: 1;
+    position: absolute;
+  }
+
+  #l1450 {
+    top: 163px;
+    margin-left: -129px;
+  }
+
+  #l1460 {
+    top: 763px;
+    margin-left: -129px;
+  }
+
+  #l1470 {
+    top: 1363px;
+    margin-left: -129px;
+  }
+
+  #l1480 {
+    top: 1963px;
+    margin-left: -129px;
+  }
+
+  #l1490 {
+    top: 2563px;
+    margin-left: -129px;
+  }
+
+  #l1500 {
+    top: 3163px;
+    margin-left: -129px;
+  }
+
+  #l1510 {
+    top: 3760px;
+    margin-left: -128px;
+  }
+
+  #l1520 {
+    top: 4348px;
+    margin-left: -128px;
+  }
+  /*#endregion*/
+
+  /*#region Year Markers*/
+  .year-marker {
+    position: absolute;
+    top: 175px;
+    left: 50%;
+    margin-left: -15px;
+    z-index: 3;
+  }
+
+  #d1452 {
+    top: 295px;
+    z-index: 50;
+  }
+
+  #d1466 {
+    top: 1135px;
+    z-index: 49;
+  }
+
+  #d1469 {
+    top: 1315px;
+    z-index: 48;
+  }
+
+  #d1472 {
+    top: 1495px;
+    z-index: 47;
+  }
+
+  #d1473 {
+    top: 1555px;
+    z-index: 46;
+  }
+
+  #d1478 {
+    top: 1855px;
+    z-index: 45;
+  }
+
+  #d1481 {
+    top: 2035px;
+    z-index: 44;
+  }
+
+  #d1482 {
+    top: 2095px;
+    z-index: 43;
+  }
+
+  #d1483 {
+    top: 2155px;
+    z-index: 42;
+  }
+
+  #d1485 {
+    top: 2275px;
+    z-index: 41;
+  }
+
+  #d1495 {
+    top: 2875px;
+    z-index: 40;
+  }
+
+  #d1502 {
+    top: 3295px;
+    z-index: 39;
+  }
+
+  #d1503 {
+    top: 3355px;
+    z-index: 38;
+  }
+
+  #d1506 {
+    top: 3535px;
+    z-index: 37;
+  }
+
+  #d1508 {
+    top: 3655px;
+    z-index: 36;
+  }
+
+  #d1513 {
+    top: 3955px;
+    z-index: 35;
+  }
+
+  #d1516 {
+    top: 4135px;
+    z-index: 34;
+  }
+
+  #d1517 {
+    top: 4195px;
+    z-index: 33;
+  }
+
+  #d1519 {
+    top: 4315px;
+    z-index: 32;
+  }
+
+  /*#endregion*/
+
+  /*#region Year Labels*/
+  .label-left,
+  .label-right {
+    position: relative;
+    top: -45px;
+    left: -85px;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    background-color: #2c638fc0;
+    padding: 0.1em;
+    border-radius: 10%;
+  }
+
+  .label-left:hover,
+  .label-right:hover {
+    background-color: #2c8f7d;
+    cursor: pointer;
+  }
+
+  .label-right {
+    left: 65px;
+  }
+
+  #l1460b i,
+  #l1490b i,
+  #l1500b i{
+    position: relative;
+    top: 3px;
+    left: -4px;
+  }
+
+  #l1460b,
+  #l1490b,
+  #l1500b {
+    width: 30px;
+    padding: 0px;
+    margin: 0;
+    left: 205px;
+    top: -55px;
+  }
+  /*#endregion*/
+
+  /*#region Timeline Content*/
+  .label-left .content {
+    position: absolute;
+    font-size: 50%;
+    width: 200%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    padding-top: 50px;
+    border-radius: 10%;
+    z-index: -1;
+    left: calc(50% - 140px);
+    top: -5px;
+    visibility: hidden;
+  }
+
+  .label-right .content {
+    position: absolute;
+    font-size: 50%;
+    width: 200%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    padding-top: 50px;
+    border-radius: 10%;
+    z-index: -1;
+    left: calc(50% - 40px);
+    top: -5px;
+    visibility: hidden;
+  }
+
+  #c1460,
+  #c1490, #c1500 {
+    width: 490%;
+    letter-spacing: normal;
+    left: -10px;
+  }
+
+  .content:hover {
+    background-color: normal;
+    font-weight: initial;
+    cursor: initial;
+  }
+
+  .content.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /*#endregion*/
+
+  /*#region Menu icon DISABLED*/
+  /*
+.menu-icon {
+  font-size: 40px;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  color: white;
+  mix-blend-mode: soft-light;
+  z-index: 101;
+}
+
+.menu-icon:hover {
+  mix-blend-mode: hard-light;
+  font-size: 41px;
+} */
+
+  /*#endregion*/
+
+  /*#endregion*/
+
+  /*#region Source citation*/
+  #source {
+    color: white;
+    font-size: 15px;
+    top: 4760px;
+    right: 30px;
+    position: absolute;
+  }
+  /*#endregion*/
+}
+
+/*#endregion*/
+
+/*#region Adjust Timeline position for top bar*/
+@media screen and (max-width: 800px) {
+  .info::after {
+    height: 270px;
+  }
+
+  #img-div {
+    display: none;
+  }
+
+  #tribute-info {
+    padding: 1em 4em;
+    font-size: 2vw;
+  }
+
+  .timeline {
+    top: 400px;
+  }
+
+  /*#region Periods*/ 
+  /*
+  #florence1 {
+    top: 1720px;
+  }
+
+  #milan1 {
+    top: 2320px;
+  }
+
+  #florence2 {
+    top: 3400px;
+  }
+
+  #milan2 {
+    top: 3880px;
+  }
+
+  #rome {
+    top: 4180px;
+  }
+
+  #high-ren {
+    top: 3100px;
+  }*/
+  /*#endregion*/
+
+  /*#region Markers*/
+
+  #d1450 {
+    top: 355px;
+  }
+
+  #d1460 {
+    top: 955px;
+  }
+
+  #d1470 {
+    top: 1555px;
+  }
+
+  #d1480 {
+    top: 2155px;
+  }
+
+  #d1490 {
+    top: 2755px;
+  }
+
+  #d1500 {
+    top: 3355px;
+  }
+
+  #d1510 {
+    top: 3955px;
+  }
+
+  #d1520 {
+    top: 4545px;
+  }
+
+  /*#endregion*/
+
+  /*#region Date labels*/
+
+  #l1450 {
+    top: 363px;
+  }
+
+  #l1460 {
+    top: 963px;
+  }
+
+  #l1470 {
+    top: 1563px;
+  }
+
+  #l1480 {
+    top: 2163px;
+  }
+
+  #l1490 {
+    top: 2763px;
+  }
+
+  #l1500 {
+    top: 3363px;
+  }
+
+  #l1510 {
+    top: 3960px;
+  }
+
+  #l1520 {
+    top: 4548px;
+  }
+
+  /*#endregion*/
+
+  /*#region Year labels*/
+  .year-marker {
+    top: 375px;
+  }
+
+  #d1452 {
+    top: 495px;
+  }
+
+  #d1466 {
+    top: 1335px;
+  }
+
+  #d1469 {
+    top: 1395px;
+  }
+
+  #d1472 {
+    top: 1695px;
+  }
+
+  #d1473 {
+    top: 1755px;
+  }
+
+  #d1478 {
+    top: 2055px;
+  }
+
+  #d1481 {
+    top: 2235px;
+  }
+
+  #d1482 {
+    top: 2295px;
+  }
+
+  #d1483 {
+    top: 2355px;
+  }
+
+  #d1485 {
+    top: 2475px;
+  }
+
+  #d1495 {
+    top: 3075px;
+  }
+
+  #d1502 {
+    top: 3495px;
+  }
+
+  #d1503 {
+    top: 3555px;
+  }
+
+  #d1506 {
+    top: 3735px;
+  }
+
+  #d1508 {
+    top: 3855px;
+  }
+
+  #d1513 {
+    top: 4155px;
+  }
+
+  #d1516 {
+    top: 4335px;
+  }
+
+  #d1517 {
+    top: 4395px;
+  }
+
+  #d1519 {
+    top: 4515px;
+  }
+  /*#endregion*/
+
+}
+/*#endregion*/
+
+/*#region For large screens +800px*/
+@media screen and (min-width: 800px) {
+  .info::after {
+    background-size: 100% 100%; /*Create additional media query for in width 1000px to improve resolution, parent width=30-40%*/
+    position: absolute;
+    background-position: left center;
+    top: 0px;
+    left: 0px;
+    transform: rotate(180deg);
+  }
+
+  .info {
+    width: 50%;
+    height: 100%;
+    max-width: 710px;
+    grid-template-rows: 6vh 2fr 3fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-row-gap: 2%;
+  }
+
+  .info::after {
+    width: 105%;
+  }
+
+  #title {
+    font-size: 500%;
+    align-self: center;
+    justify-self: center;
+    margin-top: 1.3em;
+  }
+
+  #img-div {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    width: 60%;
+    grid-template-rows: 5fr 1fr;
+    grid-row-gap: 20px;
+    justify-items: center;
+  }
+
+  #image {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  #img-caption {
+    top: 10px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  #tribute-info {
+    margin: unset;
+    padding: 0% 5%;
+    font-size: 90%;
+    text-align: justify;
+    align-self: start;
+    overflow: hidden;
+  }
+
+  .decade-circle,
+  .period,
+  .timeline,
+  .year-marker,
+  .decade-label {
+    left: 75%;
+  }
+
+  /*#region For laptop screens height -750px*/
+
+  @media screen and (max-height: 750px){
+    .info {
+      width: 45%;
+      grid-template-rows: 6vh 1fr 4fr;
+    }
+
+    #tribute-info{
+      overflow: scroll;
+    }
+
+    #tribute-info::-webkit-scrollbar-thumb{
+      mix-blend-mode: normal;
+      background-color: rgba(94, 61, 24, 0.781);
+    }
+
+    #tribute-info::-webkit-scrollbar{
+      width: 10px;
+    }
+
+    #image{
+      height: 35vh;
+      min-height: 200px;
+      width: auto;
+    }
+}
+
+
+/*#endregion*/
+}
+
+/*#endregion*/
+
+/*#region For very large screens +1100px*/
+@media screen and (min-width: 1100px) {
+  .info {
+    width: 40%;
+  }
+
+  .info::after {
+    background-size: 50% 100%;
+  }
+
+  #title {
+    font-size: 600%;
+  }
+
+  #tribute-info {
+    font-size: 95%;
+  }
+
+  #img-div {
+    grid-row-gap: 40px;
+  }
+
+  .decade-circle,
+  .period,
+  .timeline,
+  .year-marker,
+  .decade-label {
+    left: 65%;
+  }
+}
+/*#endregion*/
+
+

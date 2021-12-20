@@ -1,0 +1,501 @@
+<html>
+  <head>
+    <title>Leonardo da Vinci</title>
+    <script
+      src="https://kit.fontawesome.com/baa9e79eee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function myFunction(cont){
+        var popup = document.getElementById(cont);
+        popup.classList.toggle("show");
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Arimo|Tangerine"
+    />
+    <link rel="stylesheet" href="tribute_style.css" type="text/css" />
+  </head>
+
+  <body>
+    <main id="main">
+    <div>
+      <div class="info">
+        <h1 id="title">Leonardo da Vinci</h1>
+        <div id="img-div">
+          <img src="media/GettyImages-146331532.jpg" id="image" />
+          <p id="img-caption">
+            Presumed self-portrait by Leondaro da Vinci (1452-1519)
+          </p>
+        </div>
+        <p class="intro" id="tribute-info">
+          Leonardo da Vinci is arguably the most famous artist in history, with
+          his magnum opus – <cite>The Mona Lisa</cite> – being the most
+          recognisable and highly valued painting in the world, with an
+          estimated value of $867 million today. <br /><br />He was an
+          accomplished polymath, skilled in painting, drawing, engineering,
+          science, philosophy, sculpting, and architecture. In addition, his
+          notebooks document his notes on anatomy, astronomy, botany,
+          cartography, painting, and palaeontology. As such, he is credited as
+          one of the founders of the High Renaissance, a period of exceptional
+          artistic production during the Italian Renaissance.
+        </p>
+      </div>
+      <!--Menu icon-->
+      <!---<span class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </span>--->
+
+      <div class="timeline-screen">
+        <!---Main timeline---->
+        <div class="timeline"></div>
+
+        <!---Periods--><!---
+        <div class="period" id="florence1"></div>
+        <div class="period" id="milan1"></div>
+        <div class="period" id="florence2"></div>
+        <div class="period" id="milan2"></div>
+        <div class="period" id="rome"></div>
+        <div class="period" id="high-ren"></div>
+-->
+        <!---Date labels---->
+        <div class="decade-label" id="l1450">1450</div>
+        <div class="decade-label" id="l1460">
+          1460
+          <div class="label-right" id="l1460b" onclick="myFunction('c1460')">
+            <i class="fas fa-sort-up fa-rotate-90 fa-1.5x"></i>
+            <div class="content" id="c1460">
+              Family moved to Florence, the centre of Christian humanist thought and culture at the time.
+            </div>
+          </div>
+        </div>
+        <div class="decade-label" id="l1470">1470</div>
+        <div class="decade-label" id="l1480">1480</div>
+        <div class="decade-label" id="l1490">
+          1490
+          <div class="label-right" id="l1490b" onclick="myFunction('c1490')">
+            <i class="fas fa-sort-up fa-rotate-90"></i>
+            <div class="content" id="c1490">
+              Took in a ten-year-old Gian Giacomo Caprotti da Oreno (better known as Salaì) into his household as an assistant. Under his supervision, Salaì became a capable artist, later creating several works such as the <cite>Monna Vanna</cite>, a nude version of the <cite>Mona Lisa</cite>.
+            </div>
+          </div>
+        </div>
+        <div class="decade-label" id="l1500">1500
+          <div class="label-right" id="l1500b" onclick="myFunction('c1500')">
+            <i class="fas fa-sort-up fa-rotate-90"></i>
+            <div class="content" id="c1500">
+              Returned to Florence where he and his household were made guests at the monastery of Santissima Annunziata. He was given a workshop where he produced the drawing <cite>The Virgin and Child with St Anne and St John the Baptist</cite>.
+            </div>
+          </div>
+        </div>
+        <div class="decade-label" id="l1510">1510</div>
+        <div class="decade-label" id="l1520">1520</div>
+        
+        <!---Decade markers---->
+        <div class="decade-circle" id="d1450"></div>
+        <div class="decade-circle" id="d1460"></div>
+        <div class="decade-circle" id="d1470"></div>
+        <div class="decade-circle" id="d1480"></div>
+        <div class="decade-circle" id="d1490"></div>
+        <div class="decade-circle" id="d1500"></div>
+        <div class="decade-circle" id="d1510"></div>
+        <div class="decade-circle" id="d1520"></div>
+
+        <!---Year markers-->
+        <div class="year-marker" id="d1452">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1452" onclick="myFunction('c1452')">
+            1452
+            <div class="content" id="c1452">
+              Born Leonardo di ser Piero da Vinci in or near the town of Vinci,
+              20 miles from Florence (the exact location of his birth and
+              childhood remains ambiguous).
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1466">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1466" onclick="myFunction('c1466')">1466
+            <div class="content" id="c1466">
+              Joined the workshop of Andrea del Verrocchio at the age of 14 as a studio boy, at the time he was the leading painter and sculptor in Florence.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1469">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-right" id="l1469" onclick="myFunction('c1469')">1469
+            <div class="content" id="c1469">
+              Became an apprentice at Verrocchio’s workshop and worked alongside Botticelli, Perugino, and Ghirlandaio. Trained in chemistry, metal-working, leather working, mechanics, woodwork, and artistic skills such as drawing and painting. During this time, he assisted Verrocchio on his Baptism of Christ painting.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1472">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1472" onclick="myFunction('c1472')">1472
+            <div class="content" id="c1472">
+              Qualified as a master at a guild of artists and doctors called the Guild of Saint Luke at the age of 20. This guild consisted of local painters and doctors.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1473">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-right" id="l1473" onclick="myFunction('c1473')">1473
+            <div class="content" id="c1473">
+              Produced his first work, an ink drawing of the Arno River valley in Tuscanny.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1478">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1478" onclick="myFunction('c1478')">1478
+            <div class="content" id="c1478">
+              Received a commission to paint an altarpiece for the Chapel of St. Bernard.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1481">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1481" onclick="myFunction('c1481')">1481
+            <div class="content" id="c1481">
+              Received a commission for <cite>The Adoration of the Magi </cite>from the monks of San Donato in Scopeto. This painting would remain unfinished as Leonardo would later leave Florence to work for the duke of Milan. As such, the project was handed over to Filippino Lippi.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1482">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-right" id="l1482" onclick="myFunction('c1482')">1482
+            <div class="content" id="c1482">
+              Sent as ambassador by Lorenzo de’ Medici to the Duke of Milan, Ludovico Sforza. He was later commissioned by Sforza to design a large horse sculpture in commemoration of his father, Francesco Sforza. Known as the Gran Cavallo, it was to be the largest horse statue in the world but was never built as the bronze intended for the project was given to the duke’s brother-in-law.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1483">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1483" onclick="myFunction('c1483')">1483
+            <div class="content" id="c1483">
+              Contracted by Prior Bartolomeo Scorlione and the Confraternity of the Immaculate Conception to provide painted panels to decorate a large altarpiece produced by Giacomo del Maino, that would be displayed above the altar in the chapel. For this, Leonardo painted the <cite>Virgin of the Rocks</cite>.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1485">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-right" id="l1485" onclick="myFunction('c1485')">1485
+            <div class="content" id="c1485">
+              Sent to Hungary by Sforza to meet King Matthias Corvinus, where he was commissioned to paint a Madonna (a representation of the Virgin Mary).
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1495">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1495" onclick="myFunction('c1495')">1495
+            <div class="content" id="c1495">
+              Contracted by Sforza to paint <cite>The Last Supper</cite> to decorate the mausoleum in the monastery of Santa Maria delle Grazie (Milan, Italy) that was under construction.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1502">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-right" id="l1502" onclick="myFunction('c1502')">1502
+            <div class="content" id="c1502">
+              Entered the service of Cesare Borgia, son of Pope Alexander VI as a military architect and engineer, travelling throughout Italy. Upon creating for him a town plan for Imola, a city in the Metropolitan City of Bologna, Borgia promoted him to chief military engineer and architect.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1503">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1503" onclick="myFunction('c1503')">1503
+            <div class="content" id="c1503">
+              Left the service of Cesare Borgia and returned to Florence.  Rejoined the Guild of Saint Luke. Began work on the <cite>Mona Lisa</cite>, hat would become one of the most famous paintings to date.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1506">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-right" id="l1506" onclick="myFunction('c1506')">1506
+            <div class="content" id="c1506">
+              Summoned to Milan by the acting French governor of the city, Charles II d’Amboise. Whilst there he took on Count Francesco Melzi as another pupil, who was thought to be his favourite student.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1508">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1508" onclick="myFunction('c1508')">1508
+            <div class="content" id="c1508">
+              Leonardo was in Milan living in his house in Porta Orientale. It was in Millan that many of his pupils either knew or worked with him, including Bernardino Luini, Giovanni Antonio Boltraffio, and Marco d'Oggiono.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1513">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-right" id="l1513" onclick="myFunction('c1513')">1513
+            <div class="content" id="c1513">
+              Received by Lorenzo de’ Medici’s son Giuliano in Rome after his brother assumed the papacy. Lived in the Belvedere Courtyard in the Apostolic Palace. Here he engaged in a number of projects, including botany in the Gardens of Vatican City and dissecting cadavers.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1516">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1516" onclick="myFunction('c1516')">1516
+            <div class="content" id="c1516">
+              Entered the service of King Francis I France, working in the manor house Clos Lucé near the king’s residence. Drew plans for a castle town and made a mechanical lion with a chest that opened to reveal lilies.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1517">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-right" id="l1517" onclick="myFunction('c1517')">1517
+            <div class="content" id="c1517">
+              Leonardo’s right hand became paralysed at age 65, he continued to work until falling ill and becoming bedridden.
+            </div>
+          </div>
+        </div>
+        <div class="year-marker" id="d1519">
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM13.8954 25C13.8954 31.1329 18.8671 36.1046 25 36.1046C31.1329 36.1046 36.1046 31.1329 36.1046 25C36.1046 18.8671 31.1329 13.8954 25 13.8954C18.8671 13.8954 13.8954 18.8671 13.8954 25Z"
+              fill="#2C638F"
+              fill-opacity="0.83"
+            />
+          </svg>
+          <div class="label-left" id="l1519" onclick="myFunction('c1519')">1519
+            <div class="content" id="c1519">
+              Died at his French residence of Clos Lucé at the age of 67, likely from a stroke.
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="source">
+        Adapted from
+        <a id="tribute-link"
+          href="https://en.wikipedia.org/wiki/Leonardo_da_Vinci"
+          target="_blank"
+          >Wikipedia</a
+        >
+      </p>
+    </div>
+  </main>
+  </body>
+</html>

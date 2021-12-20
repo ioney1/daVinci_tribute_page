@@ -1,0 +1,4 @@
+to add:
+- responsiveness
+- gallery (.js)
+- animations
